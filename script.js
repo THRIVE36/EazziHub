@@ -104,4 +104,4 @@ footer{
   color:var(--primary);
   font-weight:bold;
   text-decoration:none;
-  }
+    }
