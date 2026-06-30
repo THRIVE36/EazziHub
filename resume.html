@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Resume Builder | Nexora</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+background:#081b29;
+font-family:Arial,sans-serif;
+color:white;
+margin:0;
+}
+
+.container{
+max-width:800px;
+margin:40px auto;
+background:#112e42;
+padding:30px;
+border-radius:15px;
+}
+
+h1{
+text-align:center;
+color:#00d4ff;
+margin-bottom:20px;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+textarea{
+height:120px;
+resize:vertical;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#00d4ff;
+color:#081b29;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+#output{
+margin-top:30px;
+padding:20px;
+background:#0f172a;
+border-radius:10px;
+white-space:pre-wrap;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AI Resume Builder</h1>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<input type="text" id="education" placeholder="Education">
+
+<input type="text" id="skills" placeholder="Skills (comma separated)">
+
+<textarea id="experience" placeholder="Work Experience"></textarea>
+
+<textarea id="projects" placeholder="Projects"></textarea>
+
+<button onclick="generateResume()">Generate Resume</button>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+function generateResume(){
+
+const name=document.getElementById("name").value;
+const email=document.getElementById("email").value;
+const phone=document.getElementById("phone").value;
+const education=document.getElementById("education").value;
+const skills=document.getElementById("skills").value;
+const experience=document.getElementById("experience").value;
+const projects=document.getElementById("projects").value;
+
+document.getElementById("output").innerHTML=
+`
+<h2>${name}</h2>
+
+<p><strong>Email:</strong> ${email}</p>
+
+<p><strong>Phone:</strong> ${phone}</p>
+
+<h3>Education</h3>
+
+<p>${education}</p>
+
+<h3>Skills</h3>
+
+<p>${skills}</p>
+
+<h3>Experience</h3>
+
+<p>${experience}</p>
+
+<h3>Projects</h3>
+
+<p>${projects}</p>
+`;
+
+}
+</script>
+
+</body>
+</html>
