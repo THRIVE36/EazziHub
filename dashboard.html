@@ -6,6 +6,7 @@
 <title>Nexora Dashboard</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -20,208 +21,48 @@ color:#fff;
 
 header{
 background:#0f172a;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-header h1{
-color:#00d4ff;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:bold;
-}
-
-.hero{
-background:linear-gradient(135deg,#00b4db,#0083b0);
-padding:40px;
-text-align:center;
-}
-
-.hero h2{
-font-size:36px;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.container{
-padding:40px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#112e42;
-padding:25px;
-border-radius:15px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-background:#00b4db;
-}
-
-.card h3{
-margin-bottom:15px;
-}
-
-.card p{
-margin-bottom:20px;
-}
-
-.btn{
-display:inline-block;
-padding:10px 20px;
-background:white;
-color:#0083b0;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
-
-footer{
-background:#0f172a;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>Nexora Dashboard</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-<a href="login.html">Logout</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h2>Welcome to Nexora</h2>
-
-<p>Your Digital Workspace</p>
-
-</section>
-
-<div class="container">
-
-<div class="grid">
-
-<div class="card">
-<h3>🤖 Nexora Hub</h3>
-<p>Build resumes, prepare for interviews and grow your career.</p>
-<a href="#" class="btn">Open</a>
-</div>
-
-<div class="card">
-<h3>✈️ DAARUN-NUR Travels</h3>
-<p>Book flights, visa assistance and travel packages.</p>
-<a href="#" class="btn">Explore</a>
-</div>
-
-<div class="card">
-<h3>💻 Nexora Web</h3>
-<p>Create websites and manage your online presence.</p>
-<a href="#" class="btn">Visit</a>
-</div>
-
-<div class="card">
-<h3>🎨 Nexora Design</h3>
-<p>Branding, logos, flyers and creative design services.</p>
-<a href="#" class="btn">View</a>
-</div>
-
-<div class="card">
-<h3>👤 My Profile</h3>
-<p>Manage your account and personal information.</p>
-<a href="#" class="btn">Profile</a>
-</div>
-
-<div class="card">
-<h3>⚙️ Settings</h3>
-<p>Customize your Nexora experience.</p>
-<a href="#" class="btn">Settings</a>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Nexora. All Rights Reserved.</p>
-
-</footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexora Dashboard</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-body{
-background:#081b29;
-color:white;
-font-family:Arial,Helvetica,sans-serif;
-margin:0;
-}
-
-header{
-background:#0f172a;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
+position:sticky;
+top:0;
 }
 
 header h1{
 color:#00d4ff;
-margin:0;
+}
+
+nav{
+display:flex;
+gap:20px;
+align-items:center;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-margin-left:20px;
+color:white;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.logout-btn{
+background:#ff4d4d;
+color:white;
+padding:10px 18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
 font-weight:bold;
 }
 
 .hero{
-text-align:center;
-padding:60px 20px;
 background:linear-gradient(135deg,#00b4db,#0083b0);
+padding:60px 20px;
+text-align:center;
 }
 
 .hero h2{
@@ -239,11 +80,16 @@ margin:auto;
 padding:40px 20px;
 }
 
-.user-box{
+.user-card{
 background:#112e42;
 padding:20px;
-border-radius:12px;
+border-radius:15px;
 margin-bottom:30px;
+}
+
+.user-card h2{
+color:#00d4ff;
+margin-bottom:10px;
 }
 
 .grid{
@@ -254,8 +100,8 @@ gap:20px;
 
 .card{
 background:#112e42;
-padding:20px;
-border-radius:12px;
+padding:25px;
+border-radius:15px;
 transition:.3s;
 }
 
@@ -271,23 +117,17 @@ color:#081b29;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
-border:none;
-cursor:pointer;
-}
-
-.logout{
-background:#ff4444;
-color:white;
 }
 
 footer{
 background:#0f172a;
 padding:20px;
 text-align:center;
-margin-top:50px;
+margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -297,11 +137,17 @@ margin-top:50px;
 <h1>Nexora Dashboard</h1>
 
 <nav>
+
 <a href="index.html">Home</a>
+
 <a href="about.html">About</a>
+
 <a href="services.html">Services</a>
+
 <a href="contact.html">Contact</a>
-<button class="btn logout" id="logoutBtn">Logout</button>
+
+<button id="logoutBtn" class="logout-btn">Logout</button>
+
 </nav>
 
 </header>
@@ -310,44 +156,145 @@ margin-top:50px;
 
 <h2>Welcome to Nexora</h2>
 
-<p>AI Powered Career & Innovation Platform</p>
+<p>AI-Powered Career & Innovation Platform</p>
 
 </section>
 
 <div class="container">
 
-<div class="user-box">
+<div class="user-card">
 
-<h2>Account Information</h2>
+<h2>My Account</h2>
 
 <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
 
-<p><strong>Status:</strong> Logged In ✅</p>
+<p><strong>Status:</<div class="card">
+
+<h3>💻 Nexora Web</h3>
+
+<p>Create professional websites and web applications.</p>
+
+<a href="#" class="btn">Visit</a>
 
 </div>
 
-<div class="grid">
-
 <div class="card">
-<h3>🤖 AI Resume Builder</h3>
-<p>Create a professional AI-powered resume.</p>
-<a href="#" class="btn">Open</a>
-</div>
 
-<div class="card">
-<h3>🎤 AI Interview Coach</h3>
-<p>Practice interviews with AI.</p>
-<a href="#" class="btn">Start</a>
-</div>
-
-<div class="card">
-<h3>✈️ DAARUN-NUR Travels</h3>
-<p>Flights, Visa & Tours.</p>
-<a href="#" class="btn">Explore</a>
-</div>
-
-<div class="card">
 <h3>🎨 Nexora Design</h3>
-<p>Logos, Flyers & Branding.</p>
+
+<p>Professional logos, flyers, branding and UI/UX design.</p>
+
 <a href="#" class="btn">View</a>
+
 </div>
+
+<div class="card">
+
+<h3>👤 My Profile</h3>
+
+<p>Manage your account information and preferences.</p>
+
+<a href="#" class="btn">Profile</a>
+
+</div>
+
+<div class="card">
+
+<h3>⚙️ Settings</h3>
+
+<p>Customize your Nexora experience.</p>
+
+<a href="#" class="btn">Settings</a>
+
+</div>
+
+<div class="card">
+
+<h3>📊 My Projects</h3>
+
+<p>View your resumes, applications and AI activities.</p>
+
+<a href="#" class="btn">Open</a>
+
+</div>
+
+<div class="card">
+
+<h3>💬 Support</h3>
+
+<p>Need help? Contact the Nexora support team.</p>
+
+<a href="contact.html" class="btn">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>&copy; 2026 Nexora. All Rights Reserved.</p>
+
+</footer><script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+  getAuth,
+  onAuthStateChanged,
+  signOut
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBGNI_zvB9DGSZP3qOUsd-QR9_XQaNmFR0",
+  authDomain: "eazzihub.firebaseapp.com",
+  projectId: "eazzihub",
+  storageBucket: "eazzihub.firebasestorage.app",
+  messagingSenderId: "593581035509",
+  appId: "1:593581035509:web:a7f59ad9d58056d2631abc"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Check if user is logged in
+onAuthStateChanged(auth, (user) => {
+
+  if (user) {
+
+    document.getElementById("userEmail").textContent = user.email;
+
+  } else {
+
+    window.location.href = "login.html";
+
+  }
+
+});
+
+// Logout
+const logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn.addEventListener("click", async () => {
+
+  try {
+
+    await signOut(auth);
+
+    alert("Logged out successfully.");
+
+    window.location.href = "login.html";
+
+  } catch (error) {
+
+    alert("Logout failed: " + error.message);
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
